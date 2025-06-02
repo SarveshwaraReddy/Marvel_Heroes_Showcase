@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "gilroy";
+}
+
+html,body{
+    width: 100%; 
+    height: 100%; 
+}
+
+#main{
+    width: 100%; 
+    height: 100vh; 
+    overflow: hidden;
+}
+
+#back{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+#back img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+#back img.active{
+    opacity: 1;
+}
+
+#top{
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100vh; 
+}
+
+#working-area{
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1920px;
+    height: 100vh;
+}
+
+#nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 40px 0;
+}
+
+#nleft, #nright{
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+#nav a{
+    pointer-events: all;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+#hero{
+    position: absolute;
+    margin-top: 50px;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translate(0, -50%);
+    display: flex;
+    justify-content: space-between;
+}
+
+#heroleft{
+    min-width: 50%;
+}
+
+#heroleft .elem{
+    position: relative;
+    height: 9vw;
+    overflow: hidden;
+}
+
+#heroleft .elem h1{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    font-family: "Kajiro";
+    font-weight: 100;
+    color: white;
+    font-size: 8vw;
+    line-height: 0.9;
+    text-transform: uppercase;
+}
+
+#heroleft .elem h1:nth-child(1){
+    top: 0;
+}
+
+#heroleft button{
+    pointer-events: all;
+    padding: 0.8vw 3vw;
+    font-size: 3vw;
+    margin-top: 2vw;
+    font-family: "Kajiro";
+    letter-spacing: 3px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#heroleft button:hover{
+    background-color: white;
+    color: black;
+}
+
+#heroright{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 17%;
+    color: white;
+}
+
+#heroright p{
+    text-align: right;
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+#heroright #imagediv{
+    height: 170px;
+    width: 100%;
+    background-image: url(https://cdn.pixabay.com/photo/2021/12/06/13/48/avengers-6850737_1280.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 20px 0 30px;
+    border-radius: 10px;
+}
+
+@font-face {
+    font-family: "Kajiro";
+    src: url("fonts/Kajiro.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "gilroy";
+    src: url("fonts/Gilroy-Regular.ttf") format("truetype");
+}
